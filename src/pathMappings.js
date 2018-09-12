@@ -1,4 +1,4 @@
 export default {
-  es: () => ('./localeES.json'),
-  en: () => ('./localeEN.json')
+  es: () => require('./localeES.json'),
+  en: () => require('./localeEN.json')
 };

@@ -18,7 +18,7 @@ const store = applyMiddleware(thunk)(createStore);
 createPathMappings(pathMappings);
 
 ReactDOM.render(
-  <TransProvider defaultState={{lang: 'en'}}>
+  <TransProvider defaultState={{lang: 'es'}}>
     <Provider store={store(reducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())}>
       <App />
     </Provider>

@@ -1,20 +1,18 @@
 import {
   SET_LOCALE
 } from './transActions';
+import{ updateLocaleFile } from './translator';
 
 const initialState = {
   lang: 'en'
 }
 
-export default additionalState => (state = {...initialState, ...additionalState}, action) => {
-
-  console.log(action, state);
+export default defaultState => (state = {...initialState, ...defaultState}, action) => {
   switch(action.type) {
     case SET_LOCALE:
-      console.log(action);
-      return {...state, ...action.data}
+      return {...state, ...action.data};
     default:
-      console.log(action);
+      updateLocaleFile(state.lang);
       return state;
   }
 }
