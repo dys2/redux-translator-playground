@@ -3,6 +3,7 @@ import {
 } from './transActions';
 import{ updateLocaleFile } from './translator';
 
+
 const initialState = {
   lang: 'en'
 }
